@@ -1,0 +1,55 @@
+<!DOCTYPE html><!-- ZADANIE 1 -->
+<html>
+<head>
+	<title></title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
+	<meta http-equiv="content-language" content="pl"/>
+	
+	<style type="text/css">
+	body
+	{
+		background-color: #696969;
+		color: #ffffff;
+		font-family: Verdana;
+	}
+	</style>
+</head>
+<body>
+
+	<form action="pz.php" method="post">
+	<table border=0>
+	<tr>
+		<td colspan="2" align="center">SĹodycze on-line</td>
+	</tr>
+	<tr bgcolor=#acacac>
+		<td width="150">Produkt</td>
+		<td width="15">Ilosc</td>
+	</tr>
+	<tr>
+		<td>Ciastka</td>
+		<td align="center"><input type="text" name="ilosccia" size="3" maxlength="3" /></td>
+	</tr>
+	<tr>
+		<td>Lizaki</td>
+		<td align="center"><input type="text" name="iloscliz" size="3" maxlength="3" /></td>
+	</tr>
+	<tr>
+		<td>Batoniki</td>
+		<td align="center"><input type="text" name="iloscbat" size="3" maxlength="3" /></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center" ><input type="submit" value="Złóż zamówienia" />
+	</tr>
+	<tr>
+		<td> Jak dostarczyć słodycze?</td>
+		<td><select name="jak">
+			<option value="a">Odbior Osobisty-0zł</option>
+			<option value="b">Przesyłka Kurierska-15zł</option>
+			<option value="c">List Ekonomiczny-6zł</option>
+			<option value="d">List Polecony Ekonomiczny-8zł</option>
+		</select></td>	
+	</table>
+	</form>
+</body>
+</html>

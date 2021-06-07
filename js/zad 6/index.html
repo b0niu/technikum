@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC  "-//w3c//DTD XHTML 1.0 Trict//EN"http://ww.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html>
+  <head mlns="http://www.w3.org/1999/xhtml" xml:lang="pl"lang="pl">
+  <title></title>
+	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-2">
+  <script language=javascript>
+    function btn1Click()
+      {
+        var komunikat = "Została wybrana opcja nr";
+		var rb1 = document.getElementById('r1');
+		var rb2 = document.getElementById('r2');
+		var rb3 = document.getElementById('r3');
+		if(!rb1.checked && !rb2.checked && !rb3.checked)
+		{komunikat = "Nie została wybrana żadna opcja";}
+		
+		else if(rb1.checked) 
+			{komunikat += r1.value;}
+		else if (rb2.checked)
+			{komunikat += r2.value;}
+		else if (rb3.checked)
+			{komunikat += r3.value;}
+			
+		komunikat += ".";
+		alert(komunikat);	
+      }
+    </script>
+  </head> 
+  <body>
+	<div id="div1" style "margin-bottom:10px;">
+	<input type="radio"  name="grupa1" value="1" id="r1">opcja 1
+	<input type="radio"  name="grupa1" value="2" id="r2">opcja 2	
+	<input type="radio"  name="grupa1" value="3" id="r3">opcja 3
+	</div>	
+	<div>
+        <input type="button" "przycisk1" id="btn1"
+               value="sprawdz"
+               onClick="btn1Click();">  
+	</div>			
+  </body>
+</html> 

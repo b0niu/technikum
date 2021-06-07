@@ -1,0 +1,3 @@
+Zapytanie 1: SELECT id, marka, model from samochody;
+Zapytanie 2: SELECT Samochody_id, Klient from zamowienia;
+Zapytanie 3: SELECT * from samochody where marka='fiat';

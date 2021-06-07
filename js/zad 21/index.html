@@ -1,0 +1,39 @@
+<!DOCTYPE html><!-- ZADANIE 20 -->
+<html>
+<head>
+
+	<title></title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
+	<meta http-equiv="content-language" content="pl"/>
+	
+	<meta name="description" content=""/> 
+	<meta name="keywords" content=""/>
+	
+	<meta name="author" content=""/>
+	<meta name="copyright" content=""/>
+	<script type="text/javascript">
+	function licz()
+	{var napis = document.getElementById('tekst').value;
+	var dl = napis.length;
+	document.getElementById('ddd').innerHTML ="<b>Liczba znaków to</b>  "+dl+" (Max.20)";
+	if(dl>=20)
+	{alert("Przekroczono ilość znaków!!!")}
+	}
+	function mysz1()
+	{document.getElementById('tekst').style.background = "yellow";
+
+	}
+	function mysz2()
+	{document.getElementById('tekst').style.background = "white";
+	}
+	</script>	
+</head>
+<body>
+<textarea id="tekst" onkeyup="licz();" cols=30 rows=10 onmouseover="mysz1();" onmouseout="mysz2();" />
+</textarea>
+<div id="ddd">
+<b>Liczba znaków to</b> 0 (Max.20)
+</div>
+</body>
+</html>

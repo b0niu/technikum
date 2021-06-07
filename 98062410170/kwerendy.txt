@@ -1,0 +1,4 @@
+zapytanie1:INSERT INTO uzytkownicy (nick,zainteresowania,zawod,plec) VALUE ('Anna','muzyka','informatyk','K')
+zapytanie2:INSERT INTO konta (login,haslo) VALUE ('AKowalska','qazwsx')
+zapytanie3:SELECT login,haslo FROM konta
+zapytanie4:SELECT zainteresowania FROM uzytkownicy WHERE id="1"

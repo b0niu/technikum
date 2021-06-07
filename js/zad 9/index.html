@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC  "-//w3c//DTD XHTML 1.0 Trict//EN"http://ww.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html>
+  <head mlns="http://www.w3.org/1999/xhtml" xml:lang="pl"lang="pl">
+  <title></title>
+	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-2">
+	<style type="text/css">
+		div
+		{color: red;
+		font-size:30px;
+		}
+	</style>
+ <!-- <script type="text/javascript">
+	function sprawdz()
+		{
+			var a = document.getElementById('a').value;
+			var b = document.getElementById('b').value;
+				if(a.length>=3 && b.length>=3)
+					{alert("Imię i Nazwisko poprawne!");}
+				else
+					{alert("Imię lub Nazwisko s? za krótkie!")}}
+	function inicjaly()
+		{var a = document.getElementById('a').value;
+		var b = document.getElementById('b').value;
+		var i1 = a.charAt(0);
+		var i2 = b.charAt(0);
+		var A = i1.toUpperCase();
+		var B = i2.toUpperCase();
+		alert("Inicjały to:"+A+"."+B);}
+    </script>-->
+  </head> 
+  <body>
+  <div id="wynik"></div>
+	<script type="text/javascript">
+		var tekst="";
+		var zdanie="Pracownia aplikacji internetowych"; 
+		for (i=0;i<zdanie.length;i++)
+		{tekst += zdanie[i]+" . ";}
+		
+		document.getElementById("wynik").innerHTML = tekst;
+	</script>
+<noscript>
+<p>Peszek</p>
+</noscript>	
+	
+  </body>
+</html> 

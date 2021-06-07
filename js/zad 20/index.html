@@ -1,0 +1,92 @@
+<!DOCTYPE html><!-- ZADANIE 20 -->
+<html>
+<head>
+
+	<title></title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
+	<meta http-equiv="content-language" content="pl"/>
+	
+	<meta name="description" content=""/> 
+	<meta name="keywords" content=""/>
+	
+	<meta name="author" content=""/>
+	<meta name="copyright" content=""/>
+	<script type="text/javascript">
+	function pokaz()
+	{
+	//var chk1 = document.getElementById('form1').hidden;;
+	if(fakt.checked)
+	{document.getElementById('form1').hidden= false;}
+	else
+	{document.getElementById('form1').hidden= true;}
+}
+
+function kopuj()
+	{/*var p1 = document.getElementById('imi').value;
+	var p2 = document.getElementById('naz').value;
+	var p3 = document.getElementById('ul').value;
+	var p4 = document.getElementById('nr').value;
+	var p5 = document.getElementById('kod').value;
+	var p6 = document.getElementById('mias').value;
+	document.forms['form1'].imi1.value = p1;
+	document.forms['form1'].naz1.value = p2;
+	document.forms['form1'].ul1.value = p3;
+	document.forms['form1'].nr1.value = p4;
+	document.forms['form1'].kod1.value = p5;
+	document.forms['form1'].mias1.value = p6;*/
+	for (i=2; i<=7; i++)
+	{document.forms['form1'].elements[i].value = "";}
+	var check1 = document.getElementById('firm');
+	for (i=0; i<=5; i++)
+	{schowek = document.forms['form0'].elements[i].value;
+	if((check1.checked) && (i<2)) continue
+	document.forms['form1'].elements[i+2].value = schowek;}
+	}
+	</script>	
+</head>
+<body>
+<form id="form0" >
+<table>
+	<tr>
+	<td>Imię:<input type="text" id="imi" /><br /></td>
+	</tr>
+	<tr>
+	<td>Nazwisko:<input type="text" id="naz" /><br /></td>
+	</tr>
+	<tr>
+	<td>Ulica, Nr domu:<input type="text" id="ul" /> <input type="text" id="nr" size="1" /><br /></td>
+	</tr>
+	<tr>
+	<td>Kod Pocztowy, Miasto:<input type="text" id="kod" /><input type="text" id="mias" /><br /></td>
+	</tr>
+	<tr>
+	<td>Faktura:<input type="checkbox" id="fakt" onchange="pokaz();" /><br /></td>
+	</tr>
+</table>
+</form>	
+<hr>
+<form id="form1" hidden>
+<table>
+	<tr>
+	<td>Firma:<input type="checkbox" id="firm" /><br /></td>
+	</tr>
+	<tr>
+	<td><input type="button" onclick="kopuj();" value="Skopuj Dane" /><br /></td>
+	</tr>
+	<tr>
+	<td>Imię/Nazwa Firmy:<input type="text" id="imi1" /><br /></td>
+	</tr>
+	<tr>
+	<td>Nazwisko/NIP:<input type="text" id="naz1" /><br /></td>
+	</tr>
+	<tr>
+	<td>Ulica, Nr domu:<input type="text" id="ul1" /> <input type="text" id="nr1" size="1" /><br /></td>
+	</tr>
+	<tr>
+	<td>Kod Pocztowy, Miasto:<input type="text" id="kod1" /><input type="text" id="mias1" /><br /></td>
+	</tr>
+</table>
+</form>	
+</body>
+</html>

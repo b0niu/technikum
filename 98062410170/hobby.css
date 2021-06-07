@@ -1,0 +1,38 @@
+#banner
+{
+	
+	background-color: #9A6000;
+	font-size: 180%;
+	text-align: center;
+	padding: 20px;
+	color: white;
+	
+}
+
+ul
+{
+	margin: 10px;
+}
+
+h3
+{
+	text-align: center;
+}
+
+#prawy
+{
+	height: 100%;
+	float: right;
+	background-color: #C47A00;
+	color: white;
+	width: 40%;	
+}
+
+
+
+#lewy
+{
+	float: left;
+	width: 60%;
+}
+

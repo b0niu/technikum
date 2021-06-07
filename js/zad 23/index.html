@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/199/xhtml' xml:lang="pl"
+lang="pl">
+<HEAD>
+<TITLE></TITLE>
+<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=iso-8859-2">
+<META NAME="Description" CONTENT="Forum sportowe, fanów polskiej ekstraklasy">
+<meta NAme="keywords" CONTENT="piłka nożna, piłka, ekstraklasa, forum sportowe, sport, forum, futball, polska">
+<meta name="Author" CONTENT="Jaskólski">
+<meta name="copyright" CONTENT="RobJ">
+<META HTTP-EQUIV="Content-Language" CONTENT="pl">
+<script type="text/javascript">
+		function zaznacz(){
+		
+		var che = document.getElementById('kobieta');
+		
+			if (che)
+			{
+			document.getElementById("ddd").innerHTML="<input type=\"radio\" name=\"stan\"  />Panna<br /><input type=\"radio\" name=\"stan\" id=\"pann\" onchange=\"zaznacz2();\" />Mężatka"
+			}
+		}
+		function zaznacz1(){
+		var che1 = document.getElementById('men');
+			if(che1)
+			{
+			document.getElementById("ddd").innerHTML="<input type=\"radio\" name=\"stan\"  />Kawaler<br /><input type=\"radio\" name=\"stan\" />żonaty"
+			}
+		}
+		function zaznacz2(){
+		
+		//var che = document.getElementById('pann');
+		
+			if (pann.checked)
+			{
+			document.getElementById("dddd").innerHTML="Nazwisko panieńskie:"
+			document.getElementById("dddd1").innerHTML="<input type=\"text\" name=\"stan\"  />"
+			}	
+		}
+	function praca()
+	{
+		//var che2 = document.getElementById('che2');
+		if(che2.checked)
+		{
+			document.getElementById('praca').hidden= false;
+		}
+		else
+		{
+			document.getElementById('praca').hidden= true;
+		}
+		}
+	
+</script>
+</HEAD>
+<BODY>
+	<form action="method">
+		<center><table>
+			<tr>
+				<td>Imię:</td>
+				<th><input type="text" name="Imię" /></th>
+			</tr>
+			<tr>
+				<td>Nazwisko:</td>
+				<th><input type="text" name="Nazwisko" /></th>
+			</tr>
+			<tr>
+				<td>Wiek:</td>
+				<th><input type="text" name="Wiek" /></th>
+			</tr>
+			<tr>
+				<td>Płeć:</td>
+				<th><input id="kobieta" type="radio" name="plec"  onchange="zaznacz();"/>Kobieta<input onchange="zaznacz1();" id="men" type="radio" name="plec" value="wartoć" />Mężczyzna</th>
+			</tr>
+			<tr>
+				<td>Stan Cywilny:</td>
+				<th id="ddd"></th>
+			<tr>	
+				<td id="dddd"></td>
+				<td id="dddd1"></td>
+			</tr>
+			</tr>
+			<tr>
+				<td>Dzieci:</td>
+				<th><input type="checkbox" name="nazwa" value="1" onclick="this.form.elements['dzieci'].disabled = !this.checked" />
+				<input type="text" size=1 name="dzieci" disabled="disabled" /></th>
+			</tr>
+			<tr>
+				<td colspan="2" align=center>Dowiadczenie zawodowe:</td>
+			</tr>
+			<tr>
+				<td>Absolwent</td>
+				<th><input type="radio" name="za" /></th>
+			<tr/>
+			<tr>
+				<td>Praktykat</td>
+				<th><input type="radio" name="za" /></th>
+			<tr/>
+			<tr>
+				<td>Dowiadczony pracownik</td>
+				<th><input onchange="praca();" id="che2" type="radio" name="za"  /></th>
+			<tr/>
+			<tr>
+				<td>Staż pracy</td>
+				<td><select id="praca" hidden >
+					<option>Mniej niż rok</option>
+					<option>1-5 lat</option>
+					<option>5-10 lat</option>
+					<option>10-15 lat</option>
+					<option>Powyżej 15</option>
+				</select></td>
+			</tr>
+		</table><center>
+		<center><input type="reset" value="Reset" /></center>
+		<center><input type="submit" value="Wyslij" /></center>
+	</form>
+
+</BODY>
+</HTML>

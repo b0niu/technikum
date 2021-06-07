@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC  "-//w3c//DTD XHTML 1.0 Trict//EN"http://ww.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html>
+  <head mlns="http://www.w3.org/1999/xhtml" xml:lang="pl"lang="pl">
+  <title></title>
+	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-2">
+	<style type="text/css">
+	#wynik
+	{color:red;
+	Font-size:50px;}
+	</style>
+	<script type="text/javascript">
+	function oblicz()
+	{
+	mail = document.getElementById('mail').value;
+	var poprawny=false;
+	i = 0;
+	while (i <= mail.length)
+		{
+			if (mail.charAt(i) == '@')
+			poprawny=true;
+			i++;
+		}
+		if (poprawny) {alert("adres jest poprawny")};
+	
+	}
+    </script>
+  </head> 
+  <body>
+  <div>
+	adres e-mail<input type="text" id="mail">
+	<input type="button" onclick="oblicz();" value="sprawdz">
+ </div>
+ <div id="w">
+ </div>
+ 
+ 
+	
+	
+  </body>
+</html> 

@@ -1,0 +1,36 @@
+#pojemnik
+{
+	width:100%;
+	margin:0 auto;
+}
+#baner
+{
+	background-color:#9A6000;
+	margin:20px;
+	font-size:180%;
+	text-align:center;
+	color:white;
+}
+#lewy
+{
+	width:60%;
+	float:left;
+	height:100%;
+}
+#prawy
+{
+	background-color:#C47A00;
+	color:white;
+	width:40%;
+	height:100%;
+	float:right;
+	
+}
+h3
+{
+	text-align:center;
+}
+ultra-condensed
+{
+	margin:10px;
+}

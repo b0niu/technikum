@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; iso-8859-2" />
+<meta http-equiv="Content-Language" content="pl" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="Stylesheet" type="text/css" href="style.css" />
+<title>elo</title>
+<script type="text/javascript">
+function licz()
+{var a = parseInt(document.getElementById('a').value);
+var b = parseInt(document.getElementById('b').value);
+
+var c=a+b;
+
+document.getElementById("ddd").innerHTML=c;
+}
+function licz1()
+{var a = parseInt(document.getElementById('a').value);
+var b = parseInt(document.getElementById('b').value);
+
+var c=a-b;
+
+document.getElementById("ddd").innerHTML=c;
+}
+function licz2()
+{var a = parseInt(document.getElementById('a').value);
+var b = parseInt(document.getElementById('b').value);
+
+var c=a*b;
+
+document.getElementById("ddd").innerHTML=c;
+}
+function licz3()
+{var a = parseInt(document.getElementById('a').value);
+var b = parseInt(document.getElementById('b').value);
+if(b==0)
+{var c ="Nie mo¿na dzieliæ przez zero!!!;"}
+else
+{var c=a/b;}
+
+document.getElementById("ddd").innerHTML=c;
+}
+
+
+</script>
+
+</head>
+
+<body>
+
+<div id="pojemnik" >
+	<div id="naglowek">
+	<a href="index.html"><img src="baner.jpg" width="100%" height="100%" /></a>
+	</div>
+	<div id="menu">
+	<h2>Menu:</h2>
+	<ul>
+		<li><a href="strona1.html" >Prosta dzia³ania</a></li>
+		<li><a href="" >Potêgowanie</a></li>
+	</ul>	
+	</div>
+	<div id="tresc1">
+	<h1>Proste Dzia³anie</h1>
+	Podaj pierwsz± liczbê:<input type="text" id="a" /><br />
+	Podaj drug± liczbê:<input type="text" id="b" /><br /><br />
+	<input type="button" value="Odejmowanie" onclick="licz1();" />
+	<input type="button" value="Dodawanie" onclick="licz();" />
+	<input type="button" value="Mno¿enie" onclick="licz2();" />
+	<input type="button" value="Dzielenie" onclick="licz3();" />
+	<div id="ddd"></div>
+	
+	</div>
+	<div id="stopka">
+	</div>
+
+</div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+#baner
+{
+	background-color:rgb(222,170,135);
+	text-align:right;
+}
+#dodaj
+{
+	background-color:rgb(199,190,182);
+	float:left;
+	width:33%;
+	height:500px;
+}
+#zespol
+{
+	background-color:rgb(172,147,147);
+	width:33%;
+	float:left;
+	height:500px;
+}
+#kierow
+{
+	background-color:rgb(255,204,170);
+	width:33%;
+	float:left;
+	height:500px;
+}
+#stopka
+{
+	background-color:rgb(255,213,213);
+	float:left;
+	height:100px;
+}
+img
+{
+	width:200px;
+	height:200px;
+}

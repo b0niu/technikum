@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC  "-//w3c//DTD XHTML 1.0 Trict//EN"http://ww.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html>
+  <head mlns="http://www.w3.org/1999/xhtml" xml:lang="pl"lang="pl">
+  <title></title>
+	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-2">
+	<style type="text/css">
+	#wynik
+	{color:red;
+	Font-size:50px;}
+	</style>
+	<script type="text/javascript">
+	function oblicz() {
+	var a = parseFloat(document.getElementById('od').value);
+	var b = parseFloat(document.getElementById('do').value);
+	var c = parseFloat(document.getElementById('krok').value);
+	var tekst = "";
+	for(i = a; i <= b; i+=c) {
+	tekst+=i+" ";
+	}
+	document.getElementById("w").innerHTML="wynik: "+tekst;
+	}
+	
+	
+    </script>
+  </head> 
+  <body>
+  <div>
+  <form>
+  X:<input type="text" id="od"><br />
+  Y:<input type="text" id="do"><br />
+  krok:<input type="text" id="krok">
+  <input type="button" value="oblicz" onclick="oblicz();">
+  
+ </form>
+ </div>
+ <div id="w"></div>
+ 
+ 
+	
+	
+  </body>
+</html> 

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC  "-//w3c//DTD XHTML 1.0 Trict//EN"http://ww.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html>
+  <head mlns="http://www.w3.org/1999/xhtml" xml:lang="pl"lang="pl">
+  <title></title>
+	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-2">
+	<style type="text/css">
+	#wynik
+	{color:red;
+	Font-size:50px;}
+	</style>
+ <script type="text/javascript">
+	function litery()
+	{var a = document.getElementById('tekst').value;
+	var tekst="";
+	for (i=0;i<a.length;i++)
+	if (i%2)
+		{tekst+=a[i].toLowerCase();
+		}
+	else
+		{tekst+=a[i].toUpperCase();
+		}
+	document.getElementById("wynik").innerHTML = tekst;	
+	}
+    </script>
+  </head> 
+  <body>
+  <div>
+  <input type="text" id="tekst" /><br />
+  <input type="button" onclick="litery();" value="Wyświetl"/>
+  </div>
+  <div id="wynik">
+  </div>
+	
+	
+  </body>
+</html> 

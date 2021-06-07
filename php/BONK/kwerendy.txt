@@ -1,0 +1,4 @@
+Zapytanie 1: INSERT INTO uzytkownicy SET id=1, nick='Anna', zainteresowania='muzyka', zawod='informatyk', plec='K';
+Zapytanie 2: INSERT INTO konta SET id=1, login='AKowalska', haslo='qazwsx' ;
+Zapytanie 3: SELECT login, haslo from konta;
+Zapytanie 4: SELECT zainteresowania FROM uzytkownicy WHERE id=1;

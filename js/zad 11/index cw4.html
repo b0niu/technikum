@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC  "-//w3c//DTD XHTML 1.0 Trict//EN"http://ww.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html>
+  <head mlns="http://www.w3.org/1999/xhtml" xml:lang="pl"lang="pl">
+  <title></title>
+	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-2">
+	<style type="text/css">
+	#wynik
+	{color:red;
+	Font-size:50px;}
+	</style>
+	<script type="text/javascript">
+	function oblicz() {
+	var a = parseInt(document.getElementById('od').value);
+	var tekst = "";
+	var tekst1 = "";
+	for(i = 1; i <= a; i++) {
+		tekst+="<br />";
+		for (j = 1; j <= i; j++)
+		tekst+=" Robert ";
+	}
+	document.getElementById("w").innerHTML=tekst;
+	}
+	
+	
+    </script>
+  </head> 
+  <body>
+  <div>
+  <form>
+  Wierszy:<input type="text" id="od"><br />
+  <input type="button" value="rysuj" onclick="oblicz();">
+  
+ </form>
+ </div>
+ <div id="w"></div>
+ 
+ 
+	
+	
+  </body>
+</html> 

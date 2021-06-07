@@ -1,0 +1,59 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
+	<meta name="description" content=""/> 
+	<meta name="keywords" content=""/>
+	<meta name="author" content="Arti"/>
+	<meta http-equiv="content-language" content="pl"/>
+	<meta name="copyright" content="Arti"/>
+	</head>
+<body>
+	<!--<p>Wprowadź liczbę pomiędzy 5 a 10:</p>
+	<input id="liczba" type="text">
+	<button type="button" onclick="myFunction();" >Test Input</button>
+	<p id="info"></p>-->
+	<div id="dataDiv">
+	</div>
+	<script type="text/javascript">
+		function podziel(arg1,arg2)
+		{
+			var komunikat = "";
+			if(isNaN(arg1) || isNaN(arg2))
+			{
+			komunikat +="Nieprawidłowe argumenty";
+			komunikat +="(arg1 = "+arg1+", ";
+			komunikat +="arg2 = "+arg2+"). ";
+			throw new Error(komunikat);
+			}
+			if(arg2 == 0)
+			{
+			komunikat +="Niedozwolone dzielenie przez zero (";
+			komunikat += arg1+"/"+arg2+").";
+			throw new Error(komunikt);
+			}
+			return arg1 / arg2;
+		}
+		
+		try
+		{
+		var wynik = podziel(8,0);
+		str += "Wynikiem jest: "+wynik;
+		}
+		
+		catch(e)
+		{
+		str+="Obliczenia nie mogły zostać wykonane.";
+		str+="<br />Przyczyna błędu:<br />";
+		str+=e.message;
+		}
+		
+		var dataDiv = document.getElementById("dataDiv");
+		dataDiv.innerHTML = str;
+			
+	</script>
+	
+	
+</body>
+</html>	

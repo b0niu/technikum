@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC  "-//w3c//DTD XHTML 1.0 Trict//EN"http://ww.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html>
+  <head mlns="http://www.w3.org/1999/xhtml" xml:lang="pl"lang="pl">
+  <title></title>
+	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-2">
+  <script language=javascript>
+    function oblicz()
+      {
+        var komunikat = "Wynikiem dzialania jest: ";
+		var rb1 = document.getElementById('r1');
+		var rb2 = document.getElementById('r2');
+		var rb3 = document.getElementById('r3');
+		var liczba = document.getElementById('r4').value;
+		var a = parseInt(liczba);
+		var che = document.getElementById('che');
+	if (che.checked) {
+		
+		if(!rb1.checked && !rb2.checked && !rb3.checked)
+		{komunikat = "Nie została wybrana żadna opcja";}
+		
+		else if(rb1.checked) 
+			{komunikat += a*a;
+			}
+		else if (rb2.checked)
+			{komunikat += a/2;
+			}
+		else if (rb3.checked)
+			{komunikat += Math.sqrt(a);
+			}
+		
+		komunikat += ".";
+		alert(komunikat);
+		
+		
+		}
+	else if(!che.checked) {
+		
+		if(!rb1.checked && !rb2.checked && !rb3.checked)
+		{komunikat = "Nie została wybrana żadna opcja";}
+		
+		else if(rb1.checked) 
+			{komunikat += a*a;
+			}
+		else if (rb2.checked)
+			{komunikat += a/2;
+			}
+		else if (rb3.checked)
+			{komunikat += Math.sqrt(a);
+			}
+		
+		komunikat += ".";
+		
+		
+		}
+	var Wynik = document.getElementById('Wynik');
+	Wynik.innerHTML = komunikat;
+		
+		}
+    </script>
+  </head> 
+  <body>
+	Liczba:<input type="text" size="1" id="r4">
+	<div id="div1" style "margin-bottom:10px;">
+	<fieldset><legend>Działania:</legend><br />
+	<tr><input type="radio"  name="grupa1" value="1" id="r1">Podnie do potengi 2<br /></tr>
+	<tr><input type="radio"  name="grupa1" value="2" id="r2">Podziel przez 2<br /></tr>
+	<tr><input type="radio"  name="grupa1" value="3" id="r3">Wykonaj pierwiastkowanie<br /></tr>
+	</fieldset>
+	<input type="checkbox" id="che" checked>Wywietl wynik w alercie
+	</div>
+	<div>
+        <input type="button" "przycisk1" id="wynik"
+               value="Wykonaj"
+               onClick="oblicz();"> 
+	</div>	
+	<div id="Wynik"></div>
+  </body>
+</html> 

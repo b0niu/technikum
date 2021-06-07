@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC  "-//w3c//DTD XHTML 1.0 Trict//EN"http://ww.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html>
+  <head mlns="http://www.w3.org/1999/xhtml" xml:lang="pl"lang="pl">
+  <title></title>
+	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-2">
+	<style type="text/css">
+	#wynik
+	{color:red;
+	Font-size:50px;}
+	</style>
+	<script type="text/javascript">
+	function oblicz() {
+	var x = document.getElementById('x').value;
+	var y = document.getElementById('y').value;
+	var wynik =1;
+	var tekst="";
+	for (i = 1; i <= y ; i++){
+			wynik*=x;
+			if(i==y)tekst+=x+"=";
+			else tekst+=x+"*";
+			}
+			document.getElementById("w").innerHTML="wynik : "+tekst+wynik;
+	}
+    </script>
+  </head> 
+  <body>
+  <div>
+  <form>
+  X:<input type="text" id="x">
+  Y:<input type="text" id="y">
+  <input type="button" onclick="oblicz();">
+  
+ </form>
+ </div>
+ <div id="w"></div>
+ 
+ 
+	
+	
+  </body>
+</html> 

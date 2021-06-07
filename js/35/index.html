@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
+	<meta http-equiv="content-language" content="pl"/>
+	
+	<meta name="description" content=""/> 
+	<meta name="keywords" content=""/>
+	
+	<meta name="author" content="Daniel Kozłwski"/>
+	<meta name="copyright" content="Daniel Kozłowski"/>
+	
+	<link type="stylesheet" rel="text/css" href="style.css" />
+	<script type="text/javascript">
+	
+	function odblokuj()
+	{var pas = document.getElementById('pas').value;
+	if(pas=="qwerty")
+	{document.form1.elements[X].disabled=false}
+	else
+	{alert("Złe haslo");}
+	}
+	
+	function licz()
+	{
+	var a = document.getElementById("clicka").value;
+	var b = document.getElementById("clickb").value;
+	var a1 = parseInt(a);
+	var b1 = parseInt(b);
+	var wynik = document.getElementById("wynikab");
+	wynik.innerHTML = Math.pow(a1,b1);
+	}
+	
+	function zmiana()
+	{var slowo = document.getElementById("slowo").value;
+	var wynik = document.getElementById("wyniksl");
+	if(!d2.checked)
+		{ var re1= slowo.toLowerCase();
+		wynik.innerHTML = re1;
+		}
+	else
+		{var re2 = slowo.toUpperCase();
+		wynik.innerHTML = re2;}	
+	}
+	function marka()
+	{var marka = document.getElementById('wybormarki').value;
+	alert(marka);}
+	</script>
+</head>
+<body>
+<input type="password" id="pas" />
+<input type="button" value="OBLLOKUJ" onclick="oblokuj();" />
+<hr>
+<div style
+<form id="form1" name="form1"  >
+
+a <input type="text" id="clicka" />
+b <input type="text" id="clickb" />
+<input type="button" value="OBLICZ" onclick="licz();" />
+a<sup>b</sup>=<span id="wynikab"></span>
+<br />
+<br />
+<br />
+słowo <input type="text" id="slowo" onkeyup="zmiana();"/>
+<input type="radio" id="d1" name="nwm" />małe litery
+<input type="radio" id="d2" name="nwm" />wielkie litery
+==><span id="wyniksl"></span>
+<br />
+<br />
+<br />
+wybierz
+<select id="wybormarki" onchange="marka();">
+	<option>audi</option>
+	<option>vw</option>
+	<option>bmw</option>
+	<option>fiat</option>
+	<option>opel</option>
+	<option>ford</option>
+</select>
+
+</form>
+<hr>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC  "-//w3c//DTD XHTML 1.0 Trict//EN"http://ww.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html>
+  <head mlns="http://www.w3.org/1999/xhtml" xml:lang="pl"lang="pl">
+  <title></title>
+	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-2">
+	<style type="text/css">
+	#wynik
+	{color:red;
+	Font-size:50px;}
+	</style>
+	<script type="text/javascript">
+	function oblicz()
+	{
+	var slowo = document.getElementById('slowo').value;
+	var a = slowo.toLowerCase();
+	var pier = a.charAt(0);
+	var osta = a.charAt(a.length-1);
+	var pierD = pier.toUpperCase();
+	var ostaD = pier.toUpperCase();
+	//var slowo = "";
+	//for(i=1; i < a.length-1; i++) slowo+=a.charAt(i);
+	//LUB:
+	var slowo = a.substr(1, a.length-2);
+	alert(pierD+slowo+ostaD);
+	}
+    </script>
+  </head> 
+  <body>
+  <div>
+	Podaj słowo<input type="text" id="slowo">
+	<input type="button" onclick="oblicz();" value="wyświetl">
+ </div>
+ <div id="w">
+ </div>
+ 
+ 
+	
+	
+  </body>
+</html> 

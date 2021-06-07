@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC  "-//w3c//DTD XHTML 1.0 Trict//EN"http://ww.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ <html>
+  <head mlns="http://www.w3.org/1999/xhtml" xml:lang="pl"lang="pl">
+  <title></title>
+	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-2">
+	<style type="text/css">
+	#wynik
+	{color:red;
+	Font-size:50px;}
+	</style>
+ <script type="text/javascript">
+	function weryfikuj()
+	{pd	=document.getElementById('pd').value;
+	var dl = pd.length;
+	for
+		(i=0;i<dl;++i)
+		if(!(ok = pd[i] == pd[dl-i-1])) break;
+		alert("palidrom "+ (ok ? "OK" : "nieprawidłowy!!"));
+	}
+    </script>
+  </head> 
+  <body>
+  <div>
+  <form>
+  Palidorm: <input type="text" id="pd" /><br />
+  <input type="button" onclick="weryfikuj();" value="Wyświetl"/>
+ </form>
+ </div>
+ 
+ 
+	
+	
+  </body>
+</html> 

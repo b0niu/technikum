@@ -1,0 +1,79 @@
+<!DOCTYPE html><!-- ZADANIE 19 -->
+<html>
+<head>
+
+	<title></title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
+	<meta http-equiv="content-language" content="pl"/>
+	
+	<meta name="description" content=""/> 
+	<meta name="keywords" content=""/>
+	
+	<meta name="author" content=""/>
+	<meta name="copyright" content=""/>
+	<script type="text/javascript">
+	function sprawdz()
+	{
+	var duze =/[A-Z]{1,}/;
+	var male = /[a-z]{1,}/;
+	var cyf = /[0-9]{1,}/;
+	var spec =/[!@#$%^&*\|?_]{1,}/;
+	var tekst = document.getElementById('tekst').value;
+	var dl = tekst.length;
+	var pkt=0;
+	
+	//długość
+	if(dl<=3)
+	{pkt+=0}
+	else if (dl<=6)
+	{pkt++;}
+	else if (dl<=9)
+	{pkt+=2;}
+	else
+	{pkt+=3;}
+	//złożoność
+	if(duze.exec(tekst))
+	{pkt++;}
+	if(male.exec(tekst))
+	{pkt++;}
+	if(cyf.exec(tekst))
+	{pkt++;}
+	if(spec.exec(tekst))
+	{pkt++;}
+	//sumowanie
+	/*if(pkt==0)
+	{document.getElementById('ddd').innerHTML ="  ";}
+	else if(pkt<=3)
+	{document.getElementById('ddd').innerHTML ="Hasło jest Nieodpowiednie";}
+	else if(pkt<=5)
+	{document.getElementById('ddd').innerHTML ="Hasło jest Dobre";}
+	else
+	{document.getElementById('ddd').innerHTML ="Hasło jest Bardzo Dobre";}*/
+	switch(pkt)
+		{case 1,2,3:
+		document.getElementById('ddd').innerHTML ="Hasło jest Nieodpowiednie";
+		break;
+		case 4,5:
+		document.getElementById('ddd').innerHTML ="Hasło jest Dobre";
+		break;
+		case 6,7:
+		document.getElementById('ddd').innerHTML ="Hasło jest Bardzo Dobre";
+		break;
+		}
+	
+	
+	}
+	</script>	
+</head>
+<body>
+
+	Hasło: <input type="text" id="tekst" onkeyup="sprawdz()" />
+
+	<div id="ddd">
+	</div>
+	
+	</div>
+	
+</body>
+</html>
